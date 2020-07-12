@@ -1,0 +1,85 @@
+diff --git a/node_modules/rn-bottom-drawer/src/Animator.js b/node_modules/rn-bottom-drawer/src/Animator.js
+index 0917141..4759b66 100644
+--- a/node_modules/rn-bottom-drawer/src/Animator.js
++++ b/node_modules/rn-bottom-drawer/src/Animator.js
+@@ -22,6 +22,10 @@ export default class Animator extends Component{
+     });
+   }
+ 
++  componentDidMount(){
++    this.props.resetPosition(this._resetPosition)
++  }
++
+   render() {
+     return (
+       <Animated.View 
+@@ -29,9 +33,9 @@ export default class Animator extends Component{
+           {...this.position.getLayout(), left: 0},
+           StyleSheet.flatten([
+             styles.animationContainer(this.props.containerHeight, this.props.backgroundColor),
+-            styles.roundedEdges(this.props.roundedEdges),
+-            styles.shadow(this.props.shadow)
+-          ])
++            // styles.roundedEdges(this.props.roundedEdges),
++            // styles.shadow(this.props.shadow)
++          ]),
+         ]}
+         {...this._panResponder.panHandlers}
+       >
+@@ -67,18 +71,17 @@ export default class Animator extends Component{
+     return Math.min(Math.sqrt(gesture.dy * -1), Math.sqrt(SCREEN_HEIGHT));
+   }
+ 
+-  _transitionTo(position, callback) {
++  _transitionTo = (position, callback) => {
+     Animated.spring(this.position, {
+       toValue: position
+     }).start(() => this.props.onExpanded());
+-    
+     this.props.setCurrentPosition(position);
+     callback();
+   }
+ 
+-  _resetPosition() {
++  _resetPosition = (valueFromSwiper) => {
+     Animated.spring(this.position, {
+-      toValue: this.props.currentPosition
++      toValue: valueFromSwiper || this.props.currentPosition
+     }).start();
+   }
+ }
+diff --git a/node_modules/rn-bottom-drawer/src/BottomDrawer.js b/node_modules/rn-bottom-drawer/src/BottomDrawer.js
+index df13974..526a3c6 100644
+--- a/node_modules/rn-bottom-drawer/src/BottomDrawer.js
++++ b/node_modules/rn-bottom-drawer/src/BottomDrawer.js
+@@ -57,7 +57,10 @@ export default class BottomDrawer extends Component{
+     /**
+      * A callback function triggered when the drawer swiped into down position
+      */
+-    onCollapsed: PropTypes.func
++    onCollapsed: PropTypes.func,
++
++    resetPosition: PropTypes.func,
++
+   }
+ 
+   static defaultProps = {
+@@ -104,15 +107,16 @@ export default class BottomDrawer extends Component{
+         backgroundColor = {this.props.backgroundColor}
+         onExpanded = {() => this.props.onExpanded()}
+         onCollapsed = {() => this.props.onCollapsed()}
++        resetPosition={this.props.resetPosition}
+       >
+         {this.props.children}
+ 
+-        <View style={{height: Math.sqrt(SCREEN_HEIGHT), backgroundColor: this.props.backgroundColor}} />
++        {/* <View style={{height: Math.sqrt(SCREEN_HEIGHT), backgroundColor: this.props.backgroundColor}} /> */}
+       </Animator>
+     )
+   }
+ 
+-  setCurrentPosition(position) {
++  setCurrentPosition = (position) => {
+     this.setState({ currentPosition: position })
+   }
+ 
