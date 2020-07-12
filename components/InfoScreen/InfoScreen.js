@@ -115,7 +115,7 @@ function InfoScreen({navigation, route}) {
               style={{height: '100%', width: '100%'}}
               source={{
                 uri:
-                  'https://i.pinimg.com/originals/5d/66/09/5d6609150b338d0f5829814c1f2fa4f9.jpg',
+                  'https://megamoll.com.ua/wp-content/uploads/2017/07/IMG_20170705_160815_BURST001_COVER.jpg',
               }}
             />
           </View>
@@ -124,8 +124,7 @@ function InfoScreen({navigation, route}) {
             <Image
               style={{height: '100%', width: '100%'}}
               source={{
-                uri:
-                  'https://images.unsplash.com/photo-1535332371349-a5d229f49cb5?ixlib=rb-1.2.1&w=1000&q=80',
+                uri: 'https://trademaster.ua/im/8216314-_mg_9460.jpg',
               }}
             />
           </View>
@@ -138,7 +137,7 @@ function InfoScreen({navigation, route}) {
             style={{height: '100%', width: '100%'}}
             source={{
               uri:
-                'https://i.pinimg.com/originals/ca/76/0b/ca760b70976b52578da88e06973af542.jpg',
+                'https://megamoll.com.ua/wp-content/uploads/2017/07/IMG_20170705_160125.jpg',
             }}
           />
         </View>
@@ -150,7 +149,7 @@ function InfoScreen({navigation, route}) {
             style={{height: '100%', width: '100%'}}
             source={{
               uri:
-                'https://lh3.googleusercontent.com/proxy/Ss0XMMllm-uemy4YaC-LQadj5Up4xZnt6Wok1OxBm6USKK7MHjpXbZHLKtD31T4i3qLdtQq74kOWaJWDEO4tEQDRYP8VEFu-aqTz9LLG9mMpy1CC0Xc',
+                'https://megamoll.com.ua/wp-content/uploads/2017/07/IMG_20170705_160553_BURST001_COVER.jpg',
             }}
           />
         </View>

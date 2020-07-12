@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "shikAndBlisk.app"
+               BuildableName = "Shik.app"
                BlueprintName = "shikAndBlisk"
                ReferencedContainer = "container:shikAndBlisk.xcodeproj">
             </BuildableReference>
@@ -41,9 +41,9 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
-      selectedDebuggerIdentifier = ""
-      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -55,7 +55,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "shikAndBlisk.app"
+            BuildableName = "Shik.app"
             BlueprintName = "shikAndBlisk"
             ReferencedContainer = "container:shikAndBlisk.xcodeproj">
          </BuildableReference>
@@ -72,7 +72,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "shikAndBlisk.app"
+            BuildableName = "Shik.app"
             BlueprintName = "shikAndBlisk"
             ReferencedContainer = "container:shikAndBlisk.xcodeproj">
          </BuildableReference>

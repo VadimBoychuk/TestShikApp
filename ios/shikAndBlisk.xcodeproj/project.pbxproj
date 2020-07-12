@@ -46,7 +46,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* shikAndBliskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shikAndBliskTests.m; sourceTree = "<group>"; };
 		0239965E75A2485522C674C3 /* Pods-shikAndBlisk-shikAndBliskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shikAndBlisk-shikAndBliskTests.debug.xcconfig"; path = "Target Support Files/Pods-shikAndBlisk-shikAndBliskTests/Pods-shikAndBlisk-shikAndBliskTests.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* shikAndBlisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shikAndBlisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Shik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = shikAndBlisk/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = shikAndBlisk/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* shikAndBlisk.app */,
+				13B07F961A680F5B00A75B9A /* Shik.app */,
 				00E356EE1AD99517003FC87E /* shikAndBliskTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* shikAndBlisk-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* shikAndBlisk-tvOSTests.xctest */,
@@ -241,7 +241,7 @@
 			);
 			name = shikAndBlisk;
 			productName = shikAndBlisk;
-			productReference = 13B07F961A680F5B00A75B9A /* shikAndBlisk.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Shik.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* shikAndBlisk-tvOS */ = {
@@ -296,7 +296,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = TUK3L264WX;
+						DevelopmentTeam = 9U7D4NA9Y6;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -732,7 +732,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TUK3L264WX;
+				DEVELOPMENT_TEAM = 9U7D4NA9Y6;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -745,8 +745,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = shikAndBlisk;
+				PRODUCT_BUNDLE_IDENTIFIER = org.shik.test;
+				PRODUCT_NAME = Shik;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -760,7 +760,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TUK3L264WX;
+				DEVELOPMENT_TEAM = 9U7D4NA9Y6;
 				INFOPLIST_FILE = shikAndBlisk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -768,8 +768,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = shikAndBlisk;
+				PRODUCT_BUNDLE_IDENTIFIER = org.shik.test;
+				PRODUCT_NAME = Shik;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
