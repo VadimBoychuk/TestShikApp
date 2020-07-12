@@ -20,7 +20,6 @@
 		B747972DC19BB539E1C04AE4 /* libPods-shikAndBlisk-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AA81D4C1B89FCD674827B9 /* libPods-shikAndBlisk-tvOSTests.a */; };
 		C233ABF6CDC57988EE8F16C4 /* libPods-shikAndBlisk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 250290B82638C35CD108576B /* libPods-shikAndBlisk.a */; };
 		D3716EDEDC90410DA0B42930 /* libPods-shikAndBlisk-shikAndBliskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A28AAA0B2505A15126415DD0 /* libPods-shikAndBlisk-shikAndBliskTests.a */; };
-		DD1F54F124BB7FF00023D397 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD1F54F024BB7FF00023D397 /* AppCenter-Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		A28AAA0B2505A15126415DD0 /* libPods-shikAndBlisk-shikAndBliskTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shikAndBlisk-shikAndBliskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0894B5D0D986F817307B7DA /* Pods-shikAndBlisk-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shikAndBlisk-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-shikAndBlisk-tvOSTests/Pods-shikAndBlisk-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B39BCF3DD7E229C0C4C003F2 /* Pods-shikAndBlisk-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shikAndBlisk-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-shikAndBlisk-tvOS/Pods-shikAndBlisk-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		DD1F54F024BB7FF00023D397 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "shikAndBlisk/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -127,7 +125,6 @@
 		13B07FAE1A68108700A75B9A /* shikAndBlisk */ = {
 			isa = PBXGroup;
 			children = (
-				DD1F54F024BB7FF00023D397 /* AppCenter-Config.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -344,7 +341,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				DD1F54F124BB7FF00023D397 /* AppCenter-Config.plist in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
