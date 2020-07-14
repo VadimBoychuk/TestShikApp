@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {View, Text, Animated, Image} from 'react-native';
+import {View, Text, Animated, Image, StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import Swipes from './components/Swipes/Swipes';
 import InfoScreen from './components/InfoScreen/InfoScreen';
@@ -58,6 +58,8 @@ function App() {
         setRouteName(name);
         setStateChange(!stateChange);
       }}>
+      <StatusBar barStyle="dark-content" />
+
       <Stack.Navigator>
         <Stack.Screen
           name="Home"

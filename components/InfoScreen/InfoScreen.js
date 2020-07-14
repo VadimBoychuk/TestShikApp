@@ -42,12 +42,13 @@ function InfoScreen({navigation, route}) {
               width: 35,
               height: 35,
               borderRadius: 50,
-              borderColor: 'black',
+              borderColor: '#0095c7',
               borderWidth: 2,
             }}>
             <Text
               style={{
                 fontSize: 25,
+                color: '#0095c7',
                 lineHeight: 30,
                 fontWeight: '600',
               }}>
@@ -76,6 +77,7 @@ function InfoScreen({navigation, route}) {
             <Text
               style={{
                 fontSize: 17,
+                color: '#00BFFF',
                 lineHeight: 30,
                 fontWeight: '400',
               }}>
@@ -93,9 +95,9 @@ function InfoScreen({navigation, route}) {
         }}>
         <Text
           style={{
-            fontSize: 25,
+            fontSize: 40,
             fontWeight: '600',
-            height: 25,
+            height: 40,
           }}>
           {route.params.item.name}
         </Text>

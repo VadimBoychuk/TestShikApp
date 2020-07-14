@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, Dimensions} from 'react-native';
+import {View, Text, Dimensions, StatusBar} from 'react-native';
 
 import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import {NativeModules, StatusBarIOS, Platform} from 'react-native';
@@ -47,11 +47,11 @@ function InfoDetail({navigation, route}) {
             }}>
             <Text
               style={{
-                fontSize: 25,
-                lineHeight: 30,
+                fontSize: 30,
+                lineHeight: 35,
                 fontWeight: '600',
               }}>
-              x
+              ×
             </Text>
           </View>
         </TouchableWithoutFeedback>

@@ -67,6 +67,7 @@ class Swipes extends Component {
         },
       ],
       end: true,
+      lastYpos: 500,
     };
 
     this.length = this.state.data.length;
@@ -84,7 +85,7 @@ class Swipes extends Component {
 
   componentWillReceiveProps(nexProps) {
     const route = nexProps.currentRouteName;
-    this.state.resetPosition(windowHeight - 80);
+    this.state.resetPosition(windowHeight - 90);
     this.setState({toggleArrow: true});
     if (route !== 'Home') {
       this.setState({showSwipeAreaInAnyRoutes: false});
@@ -131,12 +132,31 @@ class Swipes extends Component {
     });
   };
 
-  onSwipeUp = () => {
-    this.setState({showSwipeArea: false, toggleArrow: false});
+  onSwipeUp = param => {
+    let offset = 500;
+    if (windowHeight >= 750) {
+      offset = 620;
+    }
+    if (param && param.y) {
+      this.setState({lastYpos: param.y});
+    }
+
+    if (!param && this.state.lastYpos > offset) {
+      this.setState({showSwipeArea: true, toggleArrow: true});
+    } else {
+      this.setState({showSwipeArea: false, toggleArrow: false});
+    }
   };
 
-  onSwipeDown = () => {
-    this.setState({showSwipeArea: true, toggleArrow: true});
+  onSwipeDown = param => {
+    if (param && param.y) {
+      this.setState({lastYpos: param.y});
+    }
+    if (!param && this.state.lastYpos > 500) {
+      this.setState({showSwipeArea: false, toggleArrow: false});
+    } else {
+      this.setState({showSwipeArea: true, toggleArrow: true});
+    }
   };
   _renderItem = ({item}) => {
     const {navigation} = this.props;
@@ -197,7 +217,7 @@ class Swipes extends Component {
     // }
     return (
       <BottomDrawer
-        containerHeight={300}
+        containerHeight={320}
         offset={0}
         backgroundColor="transparent"
         shadow={false}
@@ -205,8 +225,8 @@ class Swipes extends Component {
         onExpanded={this.onSwipeUp}
         onCollapsed={this.onSwipeDown}
         resetPosition={this.resetPositionHandler}
-        downDisplay={220}>
-        <View style={{height: 220, paddingTop: 50}}>
+        downDisplay={230}>
+        <View style={{height: 230, paddingTop: 50}}>
           {showSwipeArea && showSwipeAreaInAnyRoutes && (
             <View
               style={{
@@ -240,6 +260,9 @@ class Swipes extends Component {
             <FlatList
               ref={ref => {
                 this.infListRef = ref;
+              }}
+              onScrollToIndexFailed={err => {
+                console.log(err, 'errsor');
               }}
               horizontal={true}
               style={{height: 234}}
